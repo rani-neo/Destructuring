@@ -39,7 +39,7 @@ const nested = [2, 4, [5, 6]];
 //console.log(i, j);
 const [i, , [j, k]] = nested;
 console.log(i, j, k);
-*/
+
 // Default values
 //Destructuring object
  
@@ -75,6 +75,7 @@ const restaurant = {
         console.log(`Here is your declicious pasta with ${ing1}, ${ing2} and ${ing3}`);
     }
 };
+// Spread, because 
 const arr = [7, 8, 9];
 const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
 console.log(badNewArr);
