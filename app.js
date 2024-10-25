@@ -155,18 +155,69 @@
 //Logical Assignments Operators﻿
 //7.1﻿
 //Some of the book objects from the books array are missing the edition property. Loop //over the books array, and assign this property with a number 1 (if it doesn't already exist). Use logical assignment operators.
- for (let i = 0; i < books.length; i++) {
-   books[i].edition ||= 1;
- }
- console.log(books);
+//  for (let i = 0; i < books.length; i++) {
+  //  books[i].edition ||= 1;
+//  }
+//  console.log(books);
 // 7.2﻿
 // // // Some of the book objects from the books array have the highlighted property, which by default is set to true. Iterate over the books array, and if the thirdParty.goodreads.rating property is less than 4.2, reassign it with false.
 // 
 // Use the &&= operator (tip: you may also need the ! operator)
-for (let i = 0; i < books.length; i++) {
-  books[i].highlighted ??= true; 
-  books[i].highlighted &&= !(books[i].thirdParty?.goodreads?.rating < 4.2);
-}
-console.log(books);
+// for (let i = 0; i < books.length; i++) {
+  // books[i].highlighted ??= true;
+  // books[i].highlighted &&= !(books[i].thirdParty?.goodreads?.rating < 4.2);
+// }
+// console.log(books);
+//Looping Arrays: The for-of Loop
+//8.1 Use the for-of loop to loop over the books array and sum the pages of all books.
+//use the pageSum variable below, and the pages property of the book objects.
+//let pageSum = 0;
+//for (let book of books) {
+//  pageSum += book.pages;
+//}
+//console.log(`Total pages: ${pageSum}`);
 
+//8.2 Below is the allAuthors variable which stores an empty array.Use the for-of loop to fill allAuthors with the authors of each book from the books array.
+//Remember that each book object has the author property, which can be a string (if there is only a single author) or an array (if there are multiple authors).You may need to use the typeof operatior.You can also use multiple loops if needed.The allAuthors array should have just one level (no nested arrays.)
+// const allAuthors = [];
+// for (const book of books) {
+  // if (typeof book.author === 'string') {
+  // allAuthors.push(book.author)
+  // } else {
+    // for (const author of book.author) {
+      // allAuthors.push(author)
+    // }
+// }
+// }
+// console.log(allAuthors);
+// Enhanced Object Literals﻿
+// 9.1﻿
+// // // // Below is the bookData array that contains other arrays. Each inner array consists of the property name (first element), and the value (second element). For example, in ['title', 'Computer Networking: A Top-Down Approach'], 'title' is the property name, and 'Computer Networking: A Top-Down Approach' is meant to be the value assigned to that property name.
+// 
+// // Using computed properties, fill the newBook object with the properties and values from the bookData array. The first one is done already.
+// 
+// const bookData = [
+  // ['title', 'Computer Networking: A Top-Down Approach'],
+  // ['author', ['James F. Kurose', 'Keith W. Ross']],
+  // ['publisher', 'Addison Wesley'],
+// ];
+// 
+//Do the rest
+// const newBook = {
+  // [bookData[0][0]]: bookData[0][1],
+  // [bookData[1][0]]: bookData[1][1],
+  // [bookData[2][0]]: bookData[2][1]
+// };
+// console.log(newBook);
+9.2﻿
+//Below is the pages variable. Add it as a property of the newBook2 object. Use the shorter way.
 
+// const pages = 880;
+// 
+// const newBook2 = {
+  // title: 'The C Programming Language',
+  // author: ['Brian W. Kernighan', 'Dennis M. Ritchie'],
+  // pages,
+ // ...
+// };
+// console.log(newBook2)
