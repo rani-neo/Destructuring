@@ -37,6 +37,7 @@ const restaurant = {
     }
 
 };
+const menu = [...]
 /////////////////
 /* Logical Assignment Operators
 const rest1 = {
