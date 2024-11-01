@@ -269,7 +269,7 @@ const game = {
 //8.1 Use the for-of loop to loop over the books array and sum the pages of all books. Use the pageSum variable below, and the pages property of the book objects.(Has to understand again)
 // let pageSum = 0;
 // for (let book of books) {
-  // pageSum += book.pages; 
+  // pageSum += book.pages;
 // }
 // console.log(`Total pages: ${pageSum}`);
 // 8.2﻿
@@ -319,6 +319,21 @@ const game = {
 // const newBook2 = {
   // title: 'The C Programming Language',
   // author: ['Brian W. Kernighan', 'Dennis M. Ritchie'],
-  //  pages, // This adds the pages variable as a property
-// }
-// console.log(newBook2);
+  // pages, // This adds the pages variable as a property }
+  // console.log(newBook2);
+  // Optional Chaining(?.)
+
+// 10.1﻿
+// // // // Write a function called getFirstKeyword that takes the book object as an argument. This function should return the first keyword from the book's keywords property (array) or undefined (if the keywords property doesn't exist). It shouldn't throw an error. Use optional chaining for that.
+function getFirstKeyword(book) {
+    // Use optional chaining to safely access the first keyword
+    return book.keywords?.[0]; // Returns the first keyword or undefined
+}
+
+// Example 1: Book with keywords
+const book1 = {
+    title: "Computer Science Basics",
+    author: "John Doe",
+    keywords: ["computer science", "programming", "software"]
+};
+console.log(getFirstKeyword(book1)); // Expected output: "computer science"
