@@ -299,26 +299,26 @@ const game = {
 // 
 // // Using computed properties, fill the newBook object with the properties and values from the bookData array. The first one is done already.
 // 
-const bookData = [
-  ['title', 'Computer Networking: A Top-Down Approach'],
-   ['author', ['James F. Kurose', 'Keith W. Ross']],
-   ['publisher', 'Addison Wesley'],
- ];
-
-// Do the rest
-const newBook = {
-  [bookData[0][0]]: bookData[0][1],
-  [bookData[1][0]]: bookData[1][1],
-  [bookData[2][0]]: bookData[2][1]
-};
-console.log(newBook);
-// 9.2﻿
-// // Below is the pages variable. Add it as a property of the newBook2 object. Use the shorter way.
-
-const pages = 880;
-const newBook2 = {
-  title: 'The C Programming Language',
-  author: ['Brian W. Kernighan', 'Dennis M. Ritchie'],
-   pages, // This adds the pages variable as a property
-}
-console.log(newBook2);
+// const bookData = [
+  // ['title', 'Computer Networking: A Top-Down Approach'],
+  //  ['author', ['James F. Kurose', 'Keith W. Ross']],
+  //  ['publisher', 'Addison Wesley'],
+//  ];
+// 
+//Do the rest
+// const newBook = {
+  // [bookData[0][0]]: bookData[0][1],
+  // [bookData[1][0]]: bookData[1][1],
+  // [bookData[2][0]]: bookData[2][1]
+// };
+// console.log(newBook);
+//9.2﻿
+// Below is the pages variable. Add it as a property of the newBook2 object. Use the shorter way.
+// 
+// const pages = 880;
+// const newBook2 = {
+  // title: 'The C Programming Language',
+  // author: ['Brian W. Kernighan', 'Dennis M. Ritchie'],
+  //  pages, // This adds the pages variable as a property
+// }
+// console.log(newBook2);
