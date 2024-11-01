@@ -257,7 +257,7 @@ const game = {
 // const printGoals = function (...players) {
   // console.log(players);
   // console.log(`${players.length} goals were scored`);
-  // 
+  //
 // };
 // printGoals('Davies', 'Muller', 'Lewandowski', 'Kimmich'); // Custom player names
 // printGoals(...game.scored); // Call with players who scored in the game
@@ -265,5 +265,48 @@ const game = {
 //more likely to win, WITHOUT using an if/else statement or the ternary operator.
 // team1 < team2 && console.log('Team 1 is more likely to win');
 // team1 > team2 && console.log('Team 2 is more likely to win');
+//Looping  Arrays: The for-of-Loop
+//8.1 Use the for-of loop to loop over the books array and sum the pages of all books. Use the pageSum variable below, and the pages property of the book objects.(Has to understand again)
+// let pageSum = 0;
+// for (let book of books) {
+  // pageSum += book.pages; 
+// }
+// console.log(`Total pages: ${pageSum}`);
+// 8.2﻿
+// // Below is the allAuthors variable which stores an empty array. Use the for-of loop to fill allAuthors with the authors of each book from the books array.
+// 
+// // // // Remember that each book object has the author property, which can be a string (if there is only a single author) or an array (if there are multiple authors). You may need to use the typeof operator. You can also use multiple loops if needed. The allAuthors array should have just one level (no nested arrays).
+// 
+// const allAuthors = [];
+// for (const book of books) {
+  // if (typeof books.author === 'string') {
+    // allAuthors.push(book.author)
+  // } else {
+    // for (const author of book.author) {
+      // allAuthors.push(author);
+    // }
+  // };
+// }
+// console.log(allAuthors);
+// 8.3﻿
+// // // Use the for-of loop together with Array's entries() method to log each author from allAuthors to the console together with its index. Make the index start from 1, instead of 0.
+// for (const [index, author] of allAuthors.entries()) {
+  // console.log(`${index + 1}. ${author}`);
+// }
+//Enhanced Object Literals﻿
+// 9.1﻿
+// // // // Below is the bookData array that contains other arrays. Each inner array consists of the property name (first element), and the value (second element). For example, in ['title', 'Computer Networking: A Top-Down Approach'], 'title' is the property name, and 'Computer Networking: A Top-Down Approach' is meant to be the value assigned to that property name.
+// 
+// // Using computed properties, fill the newBook object with the properties and values from the bookData array. The first one is done already.
+// 
+// const bookData = [
+  // ['title', 'Computer Networking: A Top-Down Approach'],
+  // ['author', ['James F. Kurose', 'Keith W. Ross']],
+  // ['publisher', 'Addison Wesley'],
+// ];
 
-
+// Do the rest
+const newBook = {
+  [bookData[0][0]]: bookData[0][1]
+  // ...
+};
