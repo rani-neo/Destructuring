@@ -188,47 +188,7 @@ more likely to win, WITHOUT using an if/else statement or the ternary operator.
 TEST DATA FOR 6: Use players 'Davies', 'Muller', 'Lewandowski' and 'Kimmich'. Then, call 
 the function again with players from game.scored
 
-GOOD LUCK 😀*/ 
-const game = {
-  team1: 'Bayern Munich',
-  team2: 'Borrussia Dortmund',
-  players: [
-    [
-      'Neuer',
-      'Pavard',
-      'Martinez',
-      'Alaba',
-      'Davies',
-      'Kimmich',
-      'Goretzka',
-      'Coman',
-      'Muller',
-      'Gnabry',
-      'Lewandowski',
-    ],
-    [
-      'Burki',
-      'Schulz',
-      'Hummels',
-      'Akanji',
-      'Hakimi',
-      'Weigl',
-      'Witsel',
-      'Hazard',
-      'Brandt',
-      'Sancho',
-      'Gotze',
-    ],
-  ],
-  score: '4:0',
-  scored: ['Lewandowski', 'Gnabry', 'Lewandowski', 'Hummels'],
-  date: 'Nov 9th, 2037',
-  odds: {
-    team1: 1.33,
-    draw: 3.25,
-    team2: 6.5,
-  },
-};
+// GOOD LUCK 😀*/ 
 //1. Create one player array for each team (variables 'players1' and 'players2')
 //const [players1, players2] = game.players;
 //console.log(players1, players2);
@@ -325,15 +285,126 @@ const game = {
 
 // 10.1﻿
 // // // // Write a function called getFirstKeyword that takes the book object as an argument. This function should return the first keyword from the book's keywords property (array) or undefined (if the keywords property doesn't exist). It shouldn't throw an error. Use optional chaining for that.
-function getFirstKeyword(book) {
-    // Use optional chaining to safely access the first keyword
-    return book.keywords?.[0]; // Returns the first keyword or undefined
-}
+// function getFirstKeyword(book) {
+    //Use optional chaining to safely access the first keyword
+    // return book.keywords?.[0]; // Returns the first keyword or undefined
+// }
+// 
+//Example 1: Book with keywords
+// const book1 = {
+    // title: "Computer Science Basics",
+    // author: "John Doe",
+    // keywords: ["computer science", "programming", "software"]
+// };
+// console.log(getFirstKeyword(book1)); // Expected output: "computer science"
+// // Get the keys from the thirdParty.goodreads of the first book
+// 11.1﻿
+// // // // Below is the entries variable that stores an empty array. Use the for-of loop together with the Object.keys() method to loop over the thirdParty.goodreads property (array) of the first book object from the books array. For each key, push a new array that contains that key to the entries array.
+// 
+// In the end, the entries array should be filled with arrays containing keys:
+// 
+// // [['rating'], ['ratingsCount'], ['reviewsCount'], ['fiveStartRatingCount'], ['coneStartRatingCount']]
 
-// Example 1: Book with keywords
-const book1 = {
-    title: "Computer Science Basics",
-    author: "John Doe",
-    keywords: ["computer science", "programming", "software"]
+//const entries = [];
+// object key
+//for (const key of Object.keys(books[0].thirdParty.goodreads)) {
+    //entries.push([key]);
+//}
+// Now entries should be filled with the desired structure
+//console.log(entries); 
+// 11.2﻿
+// // // The Object.values() method returns an array, which means you can call the Array's entries() method on it, for example, Object.entries(books[0].thirdParty.goodreads).entries(). The Array's entries() method returns [index, value] arrays for each element in the array.
+// 
+// // Use the for-of loop together with the Object.values() method and Array's entries() method to loop over thirdParty.goodreads property of the first book from the books array.
+// 
+// // Push each value to the appropriate inner array in the entries array (use index from entries()).
+// Initialize entries array
+// let entries = [];
+// 
+// Use Object.entries() to get both keys and values
+// for (const [key, value] of Object.entries(books[0].thirdParty.goodreads)) {
+    //  entries.push([key, value]); // Push key and value as an array
+//  }
+
+// Log the entries array to see the result
+
+// 11.3﻿
+// // Use the Object.entries() method on the thirdParty.goodreads property of the first book from the books array. Assign the returned value to the variable called entries2.
+// const entries2 = Object.entries(books[0].thirdParty.goodreads);
+// console.log(entries);
+// console.log(entries2);
+///// ///
+// coding challange #2
+// Let's continue with our football betting app!
+// 
+// 1. Loop over the game.scored array and print each player name to the console, along with 
+// the goal number (Example: "Goal 1: Lewandowski")
+// 2. Use a loop to calculate the average odd and log it to the console (We already studied 
+// how to calculate averages, you can go check if you don't remember)
+// 3. Print the 3 odds to the console, but in a nice formatted way, exaclty like this:
+      // Odd of victory Bayern Munich: 1.33
+      // Odd of draw: 3.25
+      // Odd of victory Borrussia Dortmund: 6.5
+// Get the team names directly from the game object, don't hardcode them (except for 
+// "draw"). HINT: Note how the odds and the game objects have the same property names 😉
+// 
+// BONUS: Create an object called 'scorers' which contains the names of the players who 
+// scored as properties, and the number of goals as the value. In this game, it will look 
+// like this:
+      // {
+        // Gnarby: 1,
+        // Hummels: 1,
+        // Lewandowski: 2
+      // }
+//
+const game = {
+  team1: 'Bayern Munich',
+  team2: 'Borrussia Dortmund',
+  players: [
+    [
+      'Neuer',
+      'Pavard',
+      'Martinez',
+      'Alaba',
+      'Davies',
+      'Kimmich',
+      'Goretzka',
+      'Coman',
+      'Muller',
+      'Gnarby',
+      'Lewandowski',
+    ],
+    [
+      'Burki',
+      'Schulz',
+      'Hummels',
+      'Akanji',
+      'Hakimi',
+      'Weigl',
+      'Witsel',
+      'Hazard',
+      'Brandt',
+      'Sancho',
+      'Gotze',
+    ],
+  ],
+  score: '4:0',
+  scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+  date: 'Nov 9th, 2037',
+  odds: {
+    team1: 1.33,
+    x: 3.25,
+    team2: 6.5,
+  },
 };
-console.log(getFirstKeyword(book1)); // Expected output: "computer science"
+
+// 1. Loop over the game.scored array and print each player name 
+// to the console, along with the goal number (Example: "Goal 1: Lewandowski")
+for (const [i, player] of game.scored.entries())
+  console.log(`Goal ${i + 1}: ${player}`);
+//2. Use a loop to calculate the average odd and log it to the console (We already studied 
+//how to calculate averages, you can go check if you don't remember)
+
+
+
+

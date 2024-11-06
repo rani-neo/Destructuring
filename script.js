@@ -1,5 +1,5 @@
-'Use scrict';
-// Data needed for first part of the section
+'use strict'; // Correctly written strict mode directive
+
 const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
 const openingHours = {
     [weekdays[3]]: {
@@ -10,58 +10,60 @@ const openingHours = {
         open: 11,
         close: 23,
     },
-    [weekdays[5]]:{
+    [weekdays[5]]: {
         open: 0, // open 24 hours
         close: 12 + 12,
     }, 
-};   
+};
+
 const restaurant = {
     name: 'Classico Italiano',
     location: 'Via Angelo Tavanti 23, Firenze, Italy',
     categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
     starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
     mainMenu: ['Pizza', 'Pasta', 'Risotto'],
-    // Es6 enhanced object literals
-    openingHours: openingHours,
-    
-    
+    // ES6 enhanced object literals
+    openingHours,
 
-    order (starterIndex, mainIndex) {
+    order(starterIndex, mainIndex) {
         return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
     },
 
-    orderDelivery: function ({ starterIndex = 1, mainIndex = 0, time = '20:00', address }) {
-        console.log(`order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}}`);
+    orderDelivery({ starterIndex = 1, mainIndex = 0, time = '20:00', address }) {
+        console.log(`Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`);
     },
-    orderPasta (ing1, ing2, ing3) {
-        console.log(`Here is your declicious pasta with ${ing1}, ${ing2}, ${ing3}`);
+
+    orderPasta(ing1, ing2, ing3) {
+        console.log(`Here is your delicious pasta with ${ing1}, ${ing2}, ${ing3}`);
     },
-    orderPizza (mainIngredient, ...otherIngredients) {
+
+    orderPizza(mainIngredient, ...otherIngredients) {
         console.log(mainIngredient);
         console.log(otherIngredients);
-    }
-
+    },
 };
-// Property names
-let openStr = ''; // Correctly declare and initialize the variable
 
-const properties = Object.keys(openingHours);
-console.log(properties);
-console.log(`We are open on ${properties.length} days`);
-for (const day of properties) {
-    openStr += `${day}, `;
-}
-console.log(openStr);
-// property values
-const values = Object.values(openingHours);
-console.log(values);
+//Looping Objects: Object keys, Values, and Entries
+// Property names
+// let openStr = ''; // Correctly declare and initialize the variable
+// 
+// const properties = Object.keys(openingHours);
+// console.log(properties);
+// console.log(`We are open on ${properties.length} days`);
+// for (const day of properties) {
+    // openStr += `${day}, `;
+// }
+// console.log(openStr);
+//property values
+// const values = Object.values(openingHours);
+// console.log(values);
 // Entire object 
-const entries = Object.entries(openingHours);
-//console.log(entries);
+// const entries = Object.entries(openingHours);
+// console.log(entries);
 // [key, value]
-for (const [day, {open, close}] of entries) {
-    console.log(`On ${day} we open at ${open} and close at ${close}`);
-}
+// for (const [day, {open, close}] of entries) {
+    // console.log(`On ${day} we open at ${open} and close at ${close}`);
+// } 
 /* 
 /////////////////////////
 // Optional Chaining
