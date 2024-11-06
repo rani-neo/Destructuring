@@ -404,7 +404,11 @@ for (const [i, player] of game.scored.entries())
   console.log(`Goal ${i + 1}: ${player}`);
 //2. Use a loop to calculate the average odd and log it to the console (We already studied 
 //how to calculate averages, you can go check if you don't remember)
-
+const odds = Object.values(game.odds)
+let average = 0;
+for (const odd of odds) average += odd;
+average /= odds.length;
+console.log(average);
 
 
 
