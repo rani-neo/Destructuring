@@ -217,16 +217,18 @@ const books = [
 
 //[['title', 'Clean Code'], ['author', 'Robert C. Martin']]
 
-const bookMap = new Map([['title', 'Clean Code'], ['author', 'Robert C. Martin']]);
+//const bookMap = new Map([['title', 'Clean Code'], ['author', //'Robert C. Martin']]);
 // 13.2﻿
 // // Set a new key in bookMap called pages, and assign it with a number 464.
-bookMap.set('pages', 464);
+//bookMap.set('pages', 464);
 //13.3﻿
 // Get the title and author values from bookMap, and log to the console a string formatted like that: "${title} by ${author}".
-console.log(`"${bookMap.get('title')}" by ${bookMap.get('author')}`);
+//console.log(`"${bookMap.get('title')}" by ${bookMap.get('author')}//`);
 //13.4﻿
 //Get the size of bookMap, and log it to the console.
-console.log(bookMap.size);
+//console.log(bookMap.size);
 //13.5﻿
 //Check if bookMap has the author key. and if so, log "The author of the book is known" to the console.
 if (bookMap.has ('author')) console.log ('The author is known');
+// 14.1﻿// Convert the first book object from the books array into a Map, and assign it to a firstBookMap variable.
+const firstBookMap = new Map(Object.entries(books[0]));
