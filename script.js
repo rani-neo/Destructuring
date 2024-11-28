@@ -44,6 +44,41 @@ const restaurant = {
 };
 
 const airline = 'Tap Air Portugal';
+console.log(airline.toLowerCase());
+console.log(airline.toUpperCase());
+
+// Fix capitalization in name
+const passenger = 'jOnAS'; // Jonas
+const passengerLower = passenger.toLowerCase();
+const passengerCorrect = passengerLower[0].toUpperCase() + passengerLower.slice(1);
+console.log(passengerCorrect);
+// Comparing  emails
+const email = 'hello@Jonas.io';
+const loginEmail = ' Hello@Jonas.Io \n';
+
+//const lowerEmail = loginEmail.toLowerCase();
+//const trimmedEmail = lowerEmail.trim();
+const normalizedEmail = loginEmail.toLowerCase().trim();
+console.log(normalizedEmail);
+console.log(email === normalizedEmail);
+//  replacing 
+const priceGB = '288, 97€';
+const priceUS = priceGB.replace('€', '$').replace(',', '.');
+console.log(priceUS); // Output: 288. 97$
+
+
+const announcement = 'All passengers come to barding door 23. Boardingt door 23!';
+console.log(announcement.replace('door', 'gate'));
+console.log(announcement.replaceAll('door', 'gate'));
+// Booleans 
+
+
+
+/* 
+////////////////
+
+// Working with String - Part 1
+const airline = 'Tap Air Portugal';
 const plane = 'A320';
 
 console.log(plane[0]);
